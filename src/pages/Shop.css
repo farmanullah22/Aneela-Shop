@@ -1,0 +1,97 @@
+
+/* Shop Section */
+.shop-section {
+    padding: 20px 150px;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four products per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: white;
+    text-align: left;
+}
+
+.shop-head-text {
+    margin-right: 60rem;
+    height: 2em;
+    line-height: 2em;
+    margin-top: 1em;
+}
+.breadcrumb {
+    float: left;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-control {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.quantity-control button {
+    padding: 5px 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-text {
+    text-align: center;
+}
+
+.add-to-cart {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 products per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row on smaller screens */
+    }
+    .shop-section {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 product per row on mobile */
+    }
+    .shop-section {
+        padding: 20px 20px;
+    }
+}

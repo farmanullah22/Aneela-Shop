@@ -1,0 +1,327 @@
+.hero {
+    width: 100vw;
+    height: 80vh; /* Full screen height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Ensures text is centered */
+}
+
+.hero-head-text {
+    font-size: 60px;
+    position: relative;
+    font-weight: 600;
+    color: white; /* Adjust color to make it readable */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds contrast */
+}
+
+@media (max-width:786px)
+{
+    .hero {
+        margin-top: -300px;
+    }
+    .hero-head-text {
+        margin-top: 250px;
+    }
+    .Aneelas-Trust {
+        margin-top: -300px;
+    }
+    .hero-head-text {
+        font-size: 30px;
+    }
+    .Aneela-para {
+        padding: 10px;;
+    }
+}
+.Home-hero-image {
+    width: 100%;
+    position: absolute;
+    margin-top: 300px;
+    margin-right: 15px;
+    
+}
+
+.Aneelas-Trust {
+    text-align: center;
+
+}
+
+.Aneelas-trust-text {
+    margin-top: 24rem;
+    font-size: 35px;
+}
+
+.Aneelas-trust-bold {
+    font-weight: 700;
+}
+
+.Aneela-para {
+    width: 650px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Aneela-button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 5px 20px;
+}
+
+
+
+/* Shop */
+
+/* Shop Section */
+.shop-section {
+    padding: 20px 100px;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: white;
+    text-align: left;
+}
+
+.product-name {
+    margin-top: 5px;
+}
+.product-price {
+    margin-top: 5px;
+    font-weight: bold;
+}
+.shop-head-text {
+    margin-left: 20px;
+    font-size: 39px;
+    width: 600px;
+    text-align: left;
+    
+}
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-control {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.quantity-control button {
+    padding: 5px 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-text {
+    text-align: center;
+}
+
+.add-to-cart {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Review Section */
+
+/* Container */
+.customer-reviews {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.reviews-title {
+    font-size: 39px;
+    font-weight: bold;
+    margin-left: 15rem;
+}
+
+/* Flexbox Layout */
+.reviews-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 50px;
+    margin-top: 50px;
+}
+
+/* Image */
+.review-image img {
+    width: 320px; /* Adjust as per your design */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin-left: 100px;
+}
+
+.review-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Review Content */
+.review-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.rating {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.review-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Shop Now Button */
+.shop-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.shop-button:hover {
+    background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .review-content {
+        text-align: center;
+    }
+}
+
+
+
+
+/* Cooking Section */
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 30px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+  }
+  
+  /* Default image size */
+  .image {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .cooking-head-text {
+    font-size: 39px;
+    font-weight: bold;
+    margin-left: 15rem;
+    margin-top: 20px;
+  }
+  
+  /* First row: Second image is taller */
+  .big {
+    height: 230px; /* 20px taller */
+  }
+  
+  /* Second row: Second image is smaller */
+  .small {
+    height: 190px; /* 20px shorter */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cooking-head-text {
+        margin-left: 4rem;
+    }
+    
+    .image {
+      width: 80%;
+      height: auto;
+    }
+  
+    .big {
+      height: auto;
+    }
+  
+    .small {
+      height: auto;
+    }
+  }
+  

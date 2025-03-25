@@ -1,0 +1,278 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ======= Smooth Scrolling ======= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======= Page Transition Effect ======= */
+.page-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======= Top Bar ======= */
+.top {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.top-contact {
+    margin-left: 16em;
+}
+
+.top-text {
+    margin: 0;
+}
+
+/* ======= Navbar Styles ======= */
+.navbar {
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo-img {
+    width: 90px;
+}
+
+/* ======= Navbar Links (Visible on Larger Screens) ======= */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #e60000;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+    font-size: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-icon a {
+    color: black;
+    text-decoration: none;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======= Sidebar Menu (For Mobile) ======= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.4s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1100;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar-links li {
+    margin: 15px 0;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar-links a:hover {
+    color: #e60000;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* ======= Overlay ======= */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.sidebar.open + .overlay {
+    opacity: 1;
+}
+
+/* ======= Mobile Menu Icon ======= */
+.menu-icon {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: black;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ======= Responsive Styles ======= */
+@media (max-width: 1023px) {
+    .nav-links {
+        display: none; /* Hide Navbar Links on Smaller Screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .cart-icon {
+      display: none;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .nav-links {
+        display: flex !important; /* Always show links */
+    }
+
+    .cart-icon {
+      display: none;
+    }
+
+    .menu-icon {
+        display: none !important; /* Hide menu icon */
+    }
+
+    .sidebar {
+        display: none !important; /* Hide sidebar */
+    }
+}
+
+@media (max-width: 700px) {
+  .cart-icon {
+    display: block;
+  }
+}
+@media (max-width: 430px) {
+  .cart-icon {
+    display: block;
+  }
+}
+@media (max-width: 414px) {
+  .cart-icon {
+    display: block;
+  }
+}
+@media (max-width: 360px) {
+  .cart-icon {
+    display: block;
+  }
+}
+
+
+
